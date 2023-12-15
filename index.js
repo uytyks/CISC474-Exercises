@@ -1,3 +1,12 @@
+var admin = require("firebase-admin");
+
+var serviceAccount = require("./firecreds.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://exercise5-3496e-default-rtdb.firebaseio.com"
+});
+
 const http = require('http')
 const port = 8080
 // Create a server object:
