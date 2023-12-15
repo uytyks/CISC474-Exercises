@@ -1,6 +1,6 @@
 var admin = require("firebase-admin");
 
-var serviceAccount = require("./firecreds.json");
+var serviceAccount = require("/etc/secrets/firecreds.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
